@@ -16,6 +16,34 @@ struct TwitchStream {
     title: String,
     game_name: String,
     viewer_count: i32,
+    started_at: String,
+    language: String,
+    thumbnail_url: String,
+    tags: Vec<String>,
+    // tag_ids: Vec<String>,
+    // is_mature: bool,
+    // type: String,
+    // id: String,
+    // user_login: String,
+    // user_login_id: String,
+    // user_login_name: String,
+    // user_login_type: String,
+    // user_login_email: String,
+    // user_login_description: String,
+    // user_login_offline_image_url: String,
+    // user_login_profile_image_url: String,
+    // user_login_view_count: i32,
+    // user_login_email_verified: bool,
+    // user_login_created_at: String,
+    // user_login_updated_at: String,
+    // user_login_broadcaster_type: String,
+    // user_login_stream_key: String,
+    // user_login_is_verified: bool,
+    // user_login_is_partner: bool,
+    // user_login_is_affiliate: bool,
+    // user_login_is_transcoding_enabled: bool,
+    // user_login_is_vod_recording_enabled: bool,
+
 }
 
 #[tokio::main]
@@ -47,7 +75,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         let mut user_count = 0; // Contador de resultados de usuário
         for stream in twitch_response.data {
             user_count += 1; // Incrementa o contador de resultados de usuário
-            println!("{} :, Usuário: {}, Título: {}, Game: {}, Viewers: {}", user_count, stream.user_name, stream.title, stream.game_name, stream.viewer_count);
+            println!("{}: Streamer: {}, Título da Live: {}, Categoria: {}, Viewers: {}, Início: {}, Tags: {:?}, Thumb: {}", user_count, stream.user_name, stream.title, stream.game_name, stream.viewer_count, stream.started_at, stream.tags, stream.thumbnail_url );
         }
         println!("Total de resultados de usuário: {}", user_count); // Imprime o total de resultados de usuário
     } else {
