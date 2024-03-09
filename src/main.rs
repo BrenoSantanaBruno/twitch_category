@@ -24,7 +24,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .expect("TWITCH_ACCESS_TOKEN não definido no arquivo .env");
     let client_id = env::var("TWITCH_CLIENT_ID")
         .expect("TWITCH_CLIENT_ID não definido no arquivo .env");
-    let category_name = "Red Dead Redemption 2"; // Substitua "NomeDaCategoria" pela categoria desejada
+    let category_name = "33214"; // Substitua "NomeDaCategoria" pela categoria desejada
 
     let client = reqwest::Client::new();
     let url = format!("https://api.twitch.tv/helix/streams?game_id={}", category_name);
