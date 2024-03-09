@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/ui-twitch/node_modules
+/ui-twitch/.pnp
+/ui-twitch/.pnp.js
+
+# testing
+/ui-twitch/coverage
+
+# production
+/ui-twitch/build
+
+# misc
+/ui-twitch/.DS_Store
+/ui-twitch/.env.local
+/ui-twitch/.env.development.local
+/ui-twitch/.env.test.local
+/ui-twitch/.env.production.local
+
+/ui-twitch/npm-debug.log*
+/ui-twitch/yarn-debug.log*
+/ui-twitch/yarn-error.log*
