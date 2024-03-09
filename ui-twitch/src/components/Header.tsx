@@ -19,6 +19,7 @@ const Header = ()=>{
                 mr-[3rem]
                 border-b-4
                 border-indigo-500
+                hover:border-cyan-200
             ">
                 <p>
                     <a href="#">DevStorm</a>
@@ -41,6 +42,7 @@ const Header = ()=>{
                     mr-2
                     border-b-4
                   border-indigo-500
+                  hover:border-cyan-200
                 "><a href="#">Assistir</a></p>
                 <p className="
                     item-menu
@@ -48,6 +50,7 @@ const Header = ()=>{
                     mr-2
                     border-b-4
                   border-indigo-500
+                  hover:border-cyan-200
                 "><a href="#">Sobre</a></p>
             </div>
             <div className="
@@ -67,6 +70,7 @@ const Header = ()=>{
                     mr-2
                     border-b-4
                   border-indigo-500
+                  hover:border-cyan-200
                 "><a href="#">GitHub</a></p>
                 <p className="
                     item-menu
@@ -74,10 +78,12 @@ const Header = ()=>{
                     mr-2
                     border-b-4
                   border-indigo-500
+                  hover:border-cyan-200
                 "><a href="#">Discord</a></p>
             </div>
             <div className="
                 mt-3
+                mb-[7rem]
                 border-b-2
                 border-purple-500
                 w-[100%]
