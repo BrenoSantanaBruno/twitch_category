@@ -15,6 +15,7 @@ struct TwitchStream {
     game_id: String,
     title: String,
     game_name: String,
+    viewer_count: i32,
 }
 
 #[tokio::main]
@@ -25,11 +26,12 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         .expect("TWITCH_ACCESS_TOKEN não definido no arquivo .env");
     let client_id = env::var("TWITCH_CLIENT_ID")
         .expect("TWITCH_CLIENT_ID não definido no arquivo .env");
-    let category_name = "21779"; // ID da categoria desejada
+    let category_name = "1469308723"; // ID da categoria desejada
     let pagination = 100;
-    let language = "pt";
+    let language = "pt"; // Idioma desejado
+    let status = "live"; // Status desejado "live" ou "all
     let client = reqwest::Client::new();
-    let url = format!("https://api.twitch.tv/helix/streams?game_id={}&first={}&language={}", category_name , pagination, language);
+    let url = format!("https://api.twitch.tv/helix/streams?game_id={}&first={}&language={}&type={}", category_name , pagination, language, status);
 
     let response = client.get(&url)
         .header("Authorization", format!("Bearer {}", access_token))
@@ -44,8 +46,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         println!("Streams na categoria '{}':", category_name);
         let mut user_count = 0; // Contador de resultados de usuário
         for stream in twitch_response.data {
-            println!("Usuário: {}, Título: {}, Game: {}", stream.user_name, stream.title, stream.game_name);
             user_count += 1; // Incrementa o contador de resultados de usuário
+            println!("{} :, Usuário: {}, Título: {}, Game: {}, Viewers: {}", user_count, stream.user_name, stream.title, stream.game_name, stream.viewer_count);
         }
         println!("Total de resultados de usuário: {}", user_count); // Imprime o total de resultados de usuário
     } else {
