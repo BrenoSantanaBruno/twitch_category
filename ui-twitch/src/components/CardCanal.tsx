@@ -10,6 +10,7 @@ const CardCanal = ()=>{
                 flex-wrap
                 ml-2
                 mr-2
+                hover:border-purple-500
             ">
                 <div className="
                     w-[8rem]

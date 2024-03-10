@@ -21,3 +21,4 @@
 /ui-twitch/npm-debug.log*
 /ui-twitch/yarn-debug.log*
 /ui-twitch/yarn-error.log*
+/ui-twitch/src/bkp*

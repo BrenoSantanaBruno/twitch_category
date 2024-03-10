@@ -1,3 +1,6 @@
+import React from 'react';
+import logo from '../arquivos/imagens/logoSiteStreamers.png';
+
 const Header = ()=>{
     return(
         <div className="
@@ -17,12 +20,11 @@ const Header = ()=>{
                 flex-wrap
                 ml-2
                 mr-[3rem]
-                border-b-4
-                border-indigo-500
-                hover:border-cyan-200
             ">
                 <p>
-                    <a href="#">DevStorm</a>
+                    <a href="#"><img className='
+                        w-[8rem]
+                    ' src={logo} alt="Logo" /></a>
                 </p>
             </div>
             <div className="
@@ -42,7 +44,7 @@ const Header = ()=>{
                     mr-2
                     border-b-4
                   border-indigo-500
-                  hover:border-cyan-200
+                  hover:border-purple-500
                 "><a href="#">Assistir</a></p>
                 <p className="
                     item-menu
@@ -50,7 +52,7 @@ const Header = ()=>{
                     mr-2
                     border-b-4
                   border-indigo-500
-                  hover:border-cyan-200
+                  hover:border-purple-500
                 "><a href="#">Sobre</a></p>
             </div>
             <div className="
@@ -70,7 +72,7 @@ const Header = ()=>{
                     mr-2
                     border-b-4
                   border-indigo-500
-                  hover:border-cyan-200
+                  hover:border-purple-500
                 "><a href="#">GitHub</a></p>
                 <p className="
                     item-menu
@@ -78,7 +80,7 @@ const Header = ()=>{
                     mr-2
                     border-b-4
                   border-indigo-500
-                  hover:border-cyan-200
+                  hover:border-purple-500
                 "><a href="#">Discord</a></p>
             </div>
             <div className="

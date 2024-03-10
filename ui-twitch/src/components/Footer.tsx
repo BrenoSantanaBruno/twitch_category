@@ -23,6 +23,7 @@ const Footer = ()=>{
                 <div>
                     <p>
                         Idealizado por <a href="https://twitch.tv/bsantanascalper"
+                            target="_blank"
                             className="
                                 border-b-4
                                 border-indigo-500
