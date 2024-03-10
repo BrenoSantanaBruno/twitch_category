@@ -59,3 +59,5 @@ Este projeto é licenciado sob a Licença MIT. Consulte o arquivo LICENSE.md par
 ## Observações
 
 Este projeto foi desenvolvido como parte de um estudo pessoal e pode não estar em conformidade com todas as práticas recomendadas ou requisitos de segurança. Use por sua própria conta e risco.
+
+![](https://rustacean.net/assets/rustacean-flat-happy.png)
